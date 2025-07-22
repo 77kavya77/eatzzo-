@@ -239,6 +239,135 @@ body {
     cursor: pointer;
 }
 
+.submit-btn {
+    background-color: #425010;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Story Popup Styles */
+.story-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.story-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.story-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.story-popup-header h2 {
+    margin: 0;
+    color: #425010;
+}
+
+.close-story {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #777;
+}
+
+.story-popup-content {
+    padding: 1.5rem;
+}
+
+.story-popup-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.story-popup-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.story-popup-meta span:first-child {
+    font-weight: 600;
+}
+
+.story-popup-stats span {
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.story-popup-text {
+    line-height: 1.8;
+    color: #333;
+    white-space: pre-line;
+}
+
+/* Hide scrollbar when popup is open */
+body.popup-open {
+    overflow: hidden;
+}
+
+/* Hide scrollbar but keep scrolling functionality */
+.story-popup {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.story-popup::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+@media (max-width: 768px) {
+    .story-popup {
+        width: 95%;
+    }
+    
+    .story-popup-header {
+        padding: 1rem;
+    }
+    
+    .story-popup-content {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
