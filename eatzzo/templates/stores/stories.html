@@ -188,6 +188,27 @@
         </form>
     </div>
 
+        <!-- Story Details Popup -->
+    <div class="story-overlay" id="storyOverlay"></div>
+    <div class="story-popup" id="storyPopup">
+        <div class="story-popup-header">
+            <h2 id="popupStoryTitle"></h2>
+            <button class="close-story" id="closeStory">&times;</button>
+        </div>
+        <div class="story-popup-content">
+            <img id="popupStoryImage" class="story-popup-image" alt="Story image">
+            <div class="story-popup-meta">
+                <span id="popupStoryAuthor"></span>
+                <div class="story-popup-stats">
+                    <span><i class="far fa-heart"></i> <span id="popupStoryLikes">0</span></span>
+                    <span><i class="far fa-comment"></i> <span id="popupStoryComments">0</span></span>
+                </div>
+            </div>
+            <p id="popupStoryContent" class="story-popup-text"></p>
+        </div>
+    </div>
+
+
     <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
     <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
     <script src="/eatzzo/eatzzo/static/js/blog/stories.js"></script>
