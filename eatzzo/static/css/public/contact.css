@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contact-page {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/eatzzo/eatzzo/static/images/contact/contactimg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+
+}
+
+.contact-info {
+    min-width: 300px;
+    padding: 60px;
+}
+
+.contact-form-container {
+    flex: 1;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 6%;
+    width: 720px;
+    height: 500px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    margin-left: 140px;
+}
+
+.info-icon {
+    font-size: 24px;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.info-content h3 {
+    color: #03BBD3;
+    font-size: 30px;
+}
+
+.info-content p {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 55px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid;
+    border-radius: 25px;
+    border-color: #425010;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #425010;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40%;
+    font-weight: bold;
+    margin-left: 170px;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: #425010;
+    border: 2px solid #425010;
+    overflow: hidden;
+}
+
+
+.popup-signup .form-element input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+}
+
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact-page {
+        flex-direction: column;
+    }
+}

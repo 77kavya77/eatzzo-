@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/main/donation.css">
+    <title>Donate - Help Us Feed India</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Donate to Support Our Cause</h1>
+            <p>Your contribution helps us feed the needy across India. Choose how you'd like to donate.</p>
+        </header>
+
+        <div class="donation-options">
+            <div class="donation-card">
+                <h2>Donate Food</h2>
+                <p>Contribute groceries, cooked meals, or essential food items to help those in need.</p>
+                <a href="#" class="btn" onclick="showFoodForm()">Donate Food</a>
+            </div>
+
+            <div class="donation-card">
+                <h2>Donate Money</h2>
+                <p>Your financial support allows us to purchase and distribute food efficiently.</p>
+                <a href="#" class="btn" onclick="showMoneyForm()">Donate Money</a>
+            </div>
+        </div>
+
+        <!-- Food Donation Form -->
+        <div id="foodDonationForm" class="food-donation-form">
+            <h2 class="form-title">Food Donation Details</h2>
+            <form id="foodForm">
+                <div class="anonymous-checkbox">
+                    <input type="checkbox" id="anonymous-food" onchange="toggleFoodAnonymous()">
+                    <label for="anonymous-food">Donate Anonymously (Hide my details)</label>
+                </div>
+
+                <div class="form-group" id="food-donor-name-group">
+                    <label for="donor-name">Your Name</label>
+                    <input type="text" id="donor-name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group" id="food-donor-phone-group">
+                    <label for="donor-phone">Phone Number</label>
+                    <input type="tel" id="donor-phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="food-type">Type of Food</label>
+                    <select id="food-type" required>
+                        <option value="">Select Food Type</option>
+                        <option value="groceries">Groceries (Rice, Dal, Flour, etc.)</option>
+                        <option value="cooked-food">Cooked Meals</option>
+                        <option value="snacks">Snacks & Biscuits</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="food-quantity">Quantity (Approx.)</label>
+                    <input type="text" id="food-quantity" placeholder="e.g., 5 kg, 20 packets" required>
+                </div>
+
+                <div class="form-group" id="food-delivery-option-group">
+                    <label for="delivery-option">Delivery Option</label>
+                    <select id="delivery-option" required>
+                        <option value="">Select Delivery Option</option>
+                        <option value="self-deliver">I will deliver myself</option>
+                        <option value="pickup-required">Arrange pickup from my location</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="food-donor-address-group">
+                    <label for="donor-address">Address (For Pickup, if applicable)</label>
+                    <textarea id="donor-address" placeholder="Enter your full address"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Donation</button>
+            </form>
+        </div>
+
+        <!-- Money Donation Form -->
+        <div id="moneyDonationForm" class="money-donation-form">
+            <h2 class="form-title">Money Donation Details</h2>
+            <form id="moneyForm">
+                <div class="anonymous-checkbox">
+                    <input type="checkbox" id="anonymous-money" onchange="toggleMoneyAnonymous()">
+                    <label for="anonymous-money">Donate Anonymously (Hide my details)</label>
+                </div>
+
+                <div class="form-group" id="money-donor-name-group">
+                    <label for="donor-name-money">Your Name</label>
+                    <input type="text" id="donor-name-money" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group" id="money-donor-email-group">
+                    <label for="donor-email">Email</label>
+                    <input type="email" id="donor-email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group" id="money-donor-phone-group">
+                    <label for="donor-phone-money">Phone Number</label>
+                    <input type="tel" id="donor-phone-money" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Donation Amount (₹)</label>
+                    <input type="number" id="amount" placeholder="Enter amount in INR" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="payment-method">Payment Method</label>
+                    <select id="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="upi">UPI (Google Pay, PhonePe, etc.)</option>
+                        <option value="credit-card">Credit/Debit Card</option>
+                        <option value="net-banking">Net Banking</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/blog/donation.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/additional/blocked_users.css">
+    <title>Blocked Users - EatZzo</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">Blocked Users</h1>
+        </div>
+
+        <div class="blocked-users-container">
+            <div class="section-header">
+                <i class="fas fa-ban"></i> Users You've Blocked
+            </div>
+            
+            <ul class="blocked-list" id="blockedUsersList">
+                <!-- Blocked users will be added here dynamically -->
+                <li class="blocked-user">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="user-avatar">
+                    <div class="user-info">
+                        <div class="user-name">John Smith</div>
+                        <div class="user-username">@johnsmith</div>
+                    </div>
+                    <button class="unblock-btn" data-user-id="1">
+                        <i class="fas fa-unlock"></i> Unblock
+                    </button>
+                </li>
+                
+                <li class="blocked-user">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" class="user-avatar">
+                    <div class="user-info">
+                        <div class="user-name">Sarah Johnson</div>
+                        <div class="user-username">@sarahj</div>
+                    </div>
+                    <button class="unblock-btn" data-user-id="2">
+                        <i class="fas fa-unlock"></i> Unblock
+                    </button>
+                </li>
+                
+                <li class="blocked-user">
+                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="User" class="user-avatar">
+                    <div class="user-info">
+                        <div class="user-name">Michael Brown</div>
+                        <div class="user-username">@michaelb</div>
+                    </div>
+                    <button class="unblock-btn" data-user-id="3">
+                        <i class="fas fa-unlock"></i> Unblock
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Empty State (hidden by default) -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-icon">
+                <i class="fas fa-user-slash"></i>
+            </div>
+            <h2 class="empty-title">No Blocked Users</h2>
+            <p class="empty-text">You haven't blocked any users yet.</p>
+        </div>
+    </div>
+
+    <!-- Unblock Confirmation Modal -->
+    <div class="modal" id="unblockModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Unblock User</div>
+                <button class="modal-close" id="closeUnblockModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to unblock <span id="unblockUserName">@username</span>?</p>
+                <p>They'll be able to view your profile and interact with you again.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelUnblockBtn">Cancel</button>
+                <button class="modal-btn confirm-btn" id="confirmUnblockBtn">Unblock</button>
+            </div>
+        </div>
+    </div>
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/account/blocked_user.js"></script>
+</body>
+</html>

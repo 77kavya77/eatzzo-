@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - EatZzo</title>
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/additional/settings.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="settings-header">
+            <h1 class="settings-title">Settings</h1>
+        </div>
+
+        <div class="settings-container">
+            <!-- Account Settings -->
+            <div class="settings-section">
+                <div class="section-header">Account</div>
+                <ul class="settings-list">
+                    <li class="settings-item" id="editProfileBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-user"></i></div>
+                            <div class="item-name">Edit Profile</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                    <li class="settings-item" id="changePasswordBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-lock"></i></div>
+                            <div class="item-name">Change Password</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                    <li class="settings-item" id="paymentMethodsBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-credit-card"></i></div>
+                            <div class="item-name">Payment Methods</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                    <li class="settings-item" id="addressesBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="item-name">Saved Addresses</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="settings-section">
+                <div class="section-header">Notifications</div>
+                <ul class="settings-list">
+                    <li class="settings-item">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-bell"></i></div>
+                            <div class="item-name">Push Notifications</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li class="settings-item">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="item-name">Email Notifications</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li class="settings-item">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-sms"></i></div>
+                            <div class="item-name">SMS Notifications</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Privacy Settings -->
+            <div class="settings-section">
+                <div class="section-header">Privacy</div>
+                <ul class="settings-list">
+                    <li class="settings-item">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-user-shield"></i></div>
+                            <div class="item-name">Private Account</div>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                    <li class="settings-item" id="blockedUsersBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-ban"></i></div>
+                            <div class="item-name">Blocked Users</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- More Settings -->
+            <div class="settings-section">
+                <div class="section-header">More</div>
+                <ul class="settings-list">
+                    <li class="settings-item" id="helpCenterBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-question-circle"></i></div>
+                            <div class="item-name">Help Center</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                    <li class="settings-item" id="aboutBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-info-circle"></i></div>
+                            <div class="item-name">About EatZzo</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                    <li class="settings-item" id="logoutBtn">
+                        <div class="item-label">
+                            <div class="item-icon"><i class="fas fa-sign-out-alt"></i></div>
+                            <div class="item-name">Log Out</div>
+                        </div>
+                        <div class="item-arrow"><i class="fas fa-chevron-right"></i></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Change Password</div>
+                <button class="modal-close" id="closePasswordModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="passwordForm">
+                    <div class="form-group">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">New Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm New Password</label>
+                        <input type="password" class="form-control" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelPasswordBtn">Cancel</button>
+                <button class="modal-btn save-btn" id="savePasswordBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal" id="logoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Log Out</div>
+                <button class="modal-close" id="closeLogoutModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to log out of your EatZzo account?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn cancel-btn" id="cancelLogoutBtn">Cancel</button>
+                <button class="modal-btn save-btn" id="confirmLogoutBtn">Log Out</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/account/settings.js"></script>
+</body>
+
+</html>

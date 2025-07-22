@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile - EatZzo</title>
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/additional/edit_profile.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Edit Profile Content -->
+    <div class="edit-profile-container">
+        <h1 class="edit-profile-title">Edit Profile</h1>
+        
+        <!-- Profile Picture Section -->
+        <div class="profile-picture-section">
+            <div class="profile-picture-container">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Picture" class="profile-picture" id="profilePicture">
+            </div>
+            <div class="profile-picture-actions">
+                <button class="picture-action-btn" id="changePictureBtn">
+                    <i class="fas fa-camera"></i> Change Picture
+                </button>
+                <button class="picture-action-btn delete" id="deletePictureBtn">
+                    <i class="fas fa-trash"></i> Delete
+                </button>
+                <input type="file" id="pictureUpload" accept="image/*" style="display: none;">
+            </div>
+        </div>
+        
+        <!-- Edit Profile Form -->
+        <form class="edit-profile-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" value="Maria Johnson">
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" value="chef_maria">
+            </div>
+            
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" value="1990-05-15">
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                    <option value="female" selected>Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                    <option value="prefer-not-to-say">Prefer not to say</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="maria@example.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" value="+91 9876543210">
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country">
+                    <option value="India" selected>India</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state">
+                    <option value="" disabled>Select State</option>
+                    <option value="Kerala" selected>Kerala</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="district">District</label>
+                <select id="district">
+                    <option value="" disabled>Select District</option>
+                    <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+                    <option value="Kollam">Kollam</option>
+                    <option value="Pathanamthitta">Pathanamthitta</option>
+                    <option value="Alappuzha">Alappuzha</option>
+                    <option value="Kottayam">Kottayam</option>
+                    <option value="Idukki">Idukki</option>
+                    <option value="Ernakulam" selected>Ernakulam</option>
+                    <option value="Thrissur">Thrissur</option>
+                    <option value="Palakkad">Palakkad</option>
+                    <option value="Malappuram">Malappuram</option>
+                    <option value="Kozhikode">Kozhikode</option>
+                    <option value="Wayanad">Wayanad</option>
+                    <option value="Kannur">Kannur</option>
+                    <option value="Kasaragod">Kasaragod</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" value="Kochi">
+            </div>
+            
+            <div class="form-group full-width">
+                <label for="address">Address</label>
+                <input type="text" id="address" value="123 Food Street, Marine Drive">
+            </div>
+            
+            <div class="form-group full-width">
+                <label for="bio">Bio</label>
+                <textarea id="bio">Home chef specializing in Italian and Indian fusion cuisine. Sharing my family recipes and cooking tips. DM for custom orders!</textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="save-btn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/account/edit_profile.js"></script>
+</body>
+</html>

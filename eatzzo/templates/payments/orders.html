@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - EatZzo</title>
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/additional/orders.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="page-header">
+            <h1 class="page-title">My Orders</h1>
+            <div class="filter-options">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Processing</button>
+                <button class="filter-btn">Delivered</button>
+                <button class="filter-btn">Cancelled</button>
+            </div>
+        </div>
+
+        <!-- Orders Container -->
+        <div class="orders-container" id="ordersContainer">
+            <!-- Orders will be added here dynamically -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-orders" id="emptyState">
+            <div class="empty-icon">
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h2 class="empty-title">No Orders Yet</h2>
+            <p class="empty-text">You haven't placed any orders yet. Explore our chefs and dishes to place your first
+                order!</p>
+            <button class="explore-btn" id="exploreBtn">Explore Chefs</button>
+        </div>
+    </div>
+
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/payments/orders.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+:root {
+    --primary: #425010;
+    --primary-dark: #FF5252;
+    --secondary: #4ECDC4;
+    --light: #F7FFF7;
+    --dark: #292F36;
+    --accent: #FFE66D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Additional styles for the top sellers page */
+.top-sellers-header {
+    background-color: #425010;
+    color: #e3cc00f6;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.seller-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.seller-rank {
+    font-size: 24px;
+    font-weight: 700;
+    color: #425010;
+    margin-right: 15px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.seller-details {
+    flex: 1;
+}
+
+.seller-name {
+    color: #425010;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.seller-name:hover {
+    text-decoration: underline;
+}
+
+.seller-stats {
+    display: flex;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+}
+
+.stat-item {
+    margin-right: 15px;
+}
+
+.stat-item .fa-star {
+    margin-right: 5px;
+    color: #ffe500;
+}
+
+.stat-item .fa-shopping-bag {
+    margin-right: 5px;
+    color: #e00f0f;
+}
+
+.follow-btn {
+    background-color: #425010;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: #333f0a;
+}
+
+.follow-btn.following {
+    background-color: #fff;
+    border-color: #425010;
+    box-shadow: 0 0 0px 1px #425010;
+    color: #425010;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #425010;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link i {
+    margin-right: 5px;
+}

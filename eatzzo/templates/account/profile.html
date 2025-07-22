@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile - EatZzo</title>
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/main/profile.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <!-- Profile Dropdown Menu -->
+            <div class="profile-dropdown">
+                <button class="dropdown-btn"><i class="fas fa-ellipsis-h"></i></button>
+                <div class="dropdown-content">
+                    <a href="/eatzzo/eatzzo/templates/account/edit_profile.html"><i class="fas fa-user-edit"></i> Edit Profile</a>
+                    <a href="/eatzzo/eatzzo/templates/payments/orders.html"><i class="fas fa-shopping-bag"></i> My Orders</a>
+                    <a href="/eatzzo/eatzzo/templates/account/settings.html"><i class="fas fa-cog"></i> Settings</a>
+                    <a href="/eatzzo/eatzzo/templates/account/help.html"><i class="fas fa-question-circle"></i> Help Center</a>
+                    <a href="/eatzzo/eatzzo/templates/public/index.html" style="color: red;"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </div>
+            </div>
+
+            <!-- Profile Info -->
+            <div class="profile-info">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-details">
+                    <h1>Chef Maria</h1>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">142</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5.2K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">124</div>
+                            <div class="stat-label">Products</div>
+                        </div>
+                    </div> <br>
+                    <p class="profile-bio">Home chef specializing in Italian and Indian fusion cuisine. Sharing my
+                        family recipes and cooking tips. DM for custom orders!</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Navigation -->
+        <div class="profile-nav">
+            <div class="profile-nav-item active" data-tab="posts"><i class="fas fa-th"></i> Posts</div>
+            <div class="profile-nav-item" data-tab="videos"><i class="fas fa-video"></i> Videos</div>
+            <div class="profile-nav-item" data-tab="saved"><i class="fas fa-bookmark"></i> Saved</div>
+            <div class="profile-nav-item" data-tab="shop"><i class="fas fa-store"></i> Shop</div>
+            <div class="profile-nav-item" data-tab="tagged"><i class="fas fa-tag"></i> Tagged</div>
+        </div>
+
+        <!-- Profile Content Sections -->
+        <div class="profile-content">
+            <!-- Posts Tab -->
+            <div class="tab-content active" id="posts-tab">
+                <div class="content-grid">
+                    <!-- Your existing posts content -->
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 245</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 32</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More posts... -->
+                </div>
+            </div>
+
+            <!-- Videos Tab -->
+            <div class="tab-content" id="videos-tab">
+                <div class="content-grid">
+                    <div class="content-item">
+                        <video
+                            poster="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                            <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4"
+                                type="video/mp4">
+                        </video>
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 312</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 45</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More videos... -->
+                </div>
+            </div>
+
+            <!-- Saved Tab -->
+            <div class="tab-content" id="saved-tab">
+                <div class="content-grid">
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Saved Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 189</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 24</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More saved items... -->
+                </div>
+            </div>
+
+            <!-- Shop Tab -->
+            <div class="tab-content" id="shop-tab">
+                <div class="content-grid">
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1606851181064-b7507b24377c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-shopping-cart"></i> 56</div>
+                                <div class="content-stat"><i class="fas fa-rupee-sign"></i> 250</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More products... -->
+                </div>
+            </div>
+
+            <!-- Tagged Tab -->
+            <div class="tab-content" id="tagged-tab">
+                <div class="content-grid">
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More tagged posts... -->
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="/eatzzo/eatzzo/static/images/public/idiyappam.png" alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="/eatzzo/eatzzo/static/images/public/kallappam.png" alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="/eatzzo/eatzzo/static/images/public/kappa.png" alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-item">
+                        <img src="/eatzzo/eatzzo/static/images/public/masaladosa.png" alt="Tagged Post">
+                        <div class="content-overlay">
+                            <div class="content-stats">
+                                <div class="content-stat"><i class="fas fa-heart"></i> 278</div>
+                                <div class="content-stat"><i class="fas fa-comment"></i> 39</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------------------->
+                </div>
+            </div>
+        </div>
+
+        <div class="post-modal">
+            <div class="post-modal-close">&times;</div>
+            <div class="post-modal-content">
+                <div class="post-modal-media">
+                    <!-- Media will be inserted here by JavaScript -->
+                </div>
+                <div class="post-modal-details">
+                    <div class="post-modal-header">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="post-modal-userpic">
+                        <div class="post-modal-username">Chef Maria</div>
+                    </div>
+                    <div class="post-modal-caption">
+                        Today I made this delicious pasta with homemade sauce! The recipe has been in my family for
+                        generations.
+                        #homemade #pastalover #familyrecipe
+                    </div>
+                    <div class="post-modal-actions">
+                        <div class="post-modal-action"><i class="far fa-heart"></i></div>
+                        <div class="post-modal-action"><i class="far fa-comment"></i></div>
+                        <div class="post-modal-action"><i class="far fa-bookmark"></i></div>
+                        <div class="post-modal-action"><i class="fas fa-share"></i></div>
+                    </div>
+                    <div class="post-modal-likes">1,245 likes</div>
+                    <div class="post-modal-comments">
+                        <div class="comment">
+                            <strong>foodlover22</strong> This looks amazing! Can you share the recipe?
+                        </div>
+                        <div class="comment">
+                            <strong>chef_john</strong> Beautiful presentation!
+                        </div>
+                        <div class="comment">
+                            <strong>homecook</strong> Where did you get those fresh herbs?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/account/profile.js"></script>
+</body>
+</html>

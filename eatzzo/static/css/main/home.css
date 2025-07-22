@@ -1,0 +1,531 @@
+/* ====== Global Styles ====== */
+:root {
+    --primary: #425010;
+    --primary-dark: #FF5252;
+    --secondary: #4ECDC4;
+    --light: #F7FFF7;
+    --dark: #292F36;
+    --accent: #FFE66D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    margin-left: 100px;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ====== Main Layout ====== */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0px auto 20px;
+    gap: 80px;
+}
+
+
+/* Create Post Popup Styles */
+.create-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.popup-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+.popup-body {
+    padding: 20px;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upload-area:hover {
+    border-color: #425010;
+    background-color: #f9f9f9;
+}
+
+.upload-area i {
+    font-size: 48px;
+    color: #425010;
+    margin-bottom: 15px;
+}
+
+.upload-area p {
+    margin: 0;
+    color: #555;
+}
+
+.preview-area {
+    margin-top: 20px;
+}
+
+.media-preview {
+    max-height: 300px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-preview img,
+.media-preview video {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+}
+
+.caption-area textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    min-height: 80px;
+    margin-bottom: 15px;
+}
+
+.post-options {
+    margin-bottom: 15px;
+}
+
+.post-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.price-input {
+    margin-top: 10px;
+}
+
+.price-input input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.popup-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.popup-footer button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.cancel-btn {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.post-btn {
+    background-color: #425010;
+    color: white;
+}
+
+.post-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* ====== Main Feed ====== */
+.main-feed {
+    flex: 1;
+    max-width: 600px;
+}
+
+.video-post {
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.post-user {
+    font-weight: 600;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #777;
+    margin-left: 5px;
+}
+
+.post-video {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.post-action i {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.post-caption {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.post-caption span {
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* ====== Right Sidebar ====== */
+.right-sidebar {
+    width: 300px;
+    position: sticky;
+    top: 10px;
+    height: fit-content;
+}
+
+.sidebar-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.card-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.card-title-link {
+    color: #FF5252;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.card-title-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.seller-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.seller-item:last-child {
+    border-bottom: none;
+}
+
+.seller-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.seller-info {
+    flex: 1;
+}
+
+.seller-name {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.seller-specialty {
+    font-size: 12px;
+    color: #777;
+}
+
+.follow-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recipe-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.recipe-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.recipe-info {
+    flex: 1;
+}
+
+.recipe-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.recipe-price {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.order-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #fff;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 4px 9.8px;
+}
+
+/* Kitchen Stories specific styles */
+.story-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.story-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.story-pic {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.story-info {
+    flex: 1;
+}
+
+.story-title {
+    font-weight: 600;
+    color: #425010;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.story-excerpt {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.story-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #999;
+}
+
+.story-author {
+    font-style: italic;
+}
+
+.story-likes i {
+    margin-right: 3px;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 992px) {
+    .left-sidebar {
+        width: 200px;
+    }
+
+    .right-sidebar {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .left-sidebar,
+    .main-feed,
+    .right-sidebar {
+        width: 100%;
+        position: static;
+    }
+
+    .nav-menu {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .nav-item {
+        min-width: 100px;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .right-sidebar {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sidebar-card {
+        flex: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .right-sidebar {
+        flex-direction: column;
+    }
+}

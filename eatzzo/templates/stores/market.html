@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - EatZzo</title>
+    <link rel="stylesheet" href="/eatzzo/eatzzo/static/css/main/market.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+    </style>
+</head>
+
+<body>
+    <!-- Category Buttons -->
+    <div class="category-buttons">
+        <button class="category-btn active" data-category="home-cooked">
+            <i class="fas fa-utensils"></i>
+            <span>Home Cooked Meals</span>
+        </button>
+        <button class="category-btn" data-category="spices">
+            <i class="fas fa-mortar-pestle"></i>
+            <span>Spices & Powders</span>
+        </button>
+        <button class="category-btn" data-category="pickles">
+            <i class="fas fa-box"></i>
+            <span>Pickles & Preserves</span>
+        </button>
+        <button class="category-btn" data-category="baked">
+            <i class="fas fa-bread-slice"></i>
+            <span>Baked Goods</span>
+        </button>
+        <button class="category-btn" data-category="organic">
+            <i class="fas fa-leaf"></i>
+            <span>Organic Produce</span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Market Content -->
+        <div class="market-content">
+            <!-- Home Cooked Meals -->
+            <div class="category-content active" id="home-cooked">
+                <div class="market-header">
+                    <h2 class="market-title">Home Cooked Meals</h2>
+                    <div class="sort-options">
+                        <select id="sort-home-cooked">
+                            <option value="popular">Sort by: Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="home-cooked-products">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-price="250" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Homemade Biryani</h3>
+                            <p class="product-seller">By Grandma's Kitchen</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(128)</span>
+                            </div>
+                            <p class="product-price">₹250</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="1" data-name="Homemade Biryani" data-price="250"
+                                    data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-price="180" data-rating="4.0">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Vegetable Pulao</h3>
+                            <p class="product-seller">By Spice Queen</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(89)</span>
+                            </div>
+                            <p class="product-price">₹180</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="2" data-name="Vegetable Pulao" data-price="180"
+                                    data-image="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-price="220" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Paneer Butter Masala</h3>
+                            <p class="product-seller">By North Indian Flavors</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(215)</span>
+                            </div>
+                            <p class="product-price">₹220</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="3" data-name="Paneer Butter Masala"
+                                    data-price="220"
+                                    data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-price="280" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Chicken Curry</h3>
+                            <p class="product-seller">By Traditional Taste</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(176)</span>
+                            </div>
+                            <p class="product-price">₹280</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="4" data-name="Chicken Curry" data-price="280"
+                                    data-image="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spices & Powders -->
+            <div class="category-content" id="spices">
+                <div class="market-header">
+                    <h2 class="market-title">Spices & Powders</h2>
+                    <div class="sort-options">
+                        <select id="sort-spices">
+                            <option value="popular">Sort by: Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="spices-products">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-price="150" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1606851181064-b7507b24377c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Garam Masala</h3>
+                            <p class="product-seller">By Spice Master</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(342)</span>
+                            </div>
+                            <p class="product-price">₹150 (200g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="5" data-name="Garam Masala" data-price="150"
+                                    data-image="https://images.unsplash.com/photo-1606851181064-b7507b24377c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-price="120" data-rating="4.0">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Sambar Powder</h3>
+                            <p class="product-seller">By South Indian Spices</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(278)</span>
+                            </div>
+                            <p class="product-price">₹120 (200g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="6" data-name="Sambar Powder" data-price="120"
+                                    data-image="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-price="180" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Biryani Masala</h3>
+                            <p class="product-seller">By Royal Spices</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(195)</span>
+                            </div>
+                            <p class="product-price">₹180 (200g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="7" data-name="Biryani Masala" data-price="180"
+                                    data-image="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-price="200" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Kerala Fish Curry Powder</h3>
+                            <p class="product-seller">By Coastal Flavors</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(156)</span>
+                            </div>
+                            <p class="product-price">₹200 (200g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="8" data-name="Kerala Fish Curry Powder"
+                                    data-price="200"
+                                    data-image="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pickles & Preserves -->
+            <div class="category-content" id="pickles">
+                <div class="market-header">
+                    <h2 class="market-title">Pickles & Preserves</h2>
+                    <div class="sort-options">
+                        <select id="sort-pickles">
+                            <option value="popular">Sort by: Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="pickles-products">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-price="200" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Mango Pickle</h3>
+                            <p class="product-seller">By Grandma's Kitchen</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(421)</span>
+                            </div>
+                            <p class="product-price">₹200 (500g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="9" data-name="Mango Pickle" data-price="200"
+                                    data-image="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-price="180" data-rating="4.0">
+                        <img src="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Lemon Pickle</h3>
+                            <p class="product-seller">By Traditional Taste</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(312)</span>
+                            </div>
+                            <p class="product-price">₹180 (500g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="10" data-name="Lemon Pickle" data-price="180"
+                                    data-image="https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-price="220" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Mixed Vegetable Pickle</h3>
+                            <p class="product-seller">By Spice Queen</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(287)</span>
+                            </div>
+                            <p class="product-price">₹220 (500g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="11" data-name="Mixed Vegetable Pickle"
+                                    data-price="220"
+                                    data-image="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-price="240" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Garlic Pickle</h3>
+                            <p class="product-seller">By North Indian Flavors</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(198)</span>
+                            </div>
+                            <p class="product-price">₹240 (500g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="12" data-name="Garlic Pickle" data-price="240"
+                                    data-image="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baked Goods -->
+            <div class="category-content" id="baked">
+                <div class="market-header">
+                    <h2 class="market-title">Baked Goods</h2>
+                    <div class="sort-options">
+                        <select id="sort-baked">
+                            <option value="popular">Sort by: Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="baked-products">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-price="150" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Chocolate Chip Cookies</h3>
+                            <p class="product-seller">By Sweet Treats</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(512)</span>
+                            </div>
+                            <p class="product-price">₹150 (6 pcs)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="13" data-name="Chocolate Chip Cookies"
+                                    data-price="150"
+                                    data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-price="450" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Red Velvet Cake</h3>
+                            <p class="product-seller">By Baking Queen</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(387)</span>
+                            </div>
+                            <p class="product-price">₹450 (1kg)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="14" data-name="Red Velvet Cake" data-price="450"
+                                    data-image="https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-price="180" data-rating="4.0">
+                        <img src="https://images.unsplash.com/photo-1630910392840-7a1a8ddfa6a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Sourdough Bread</h3>
+                            <p class="product-seller">By Artisan Baker</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(276)</span>
+                            </div>
+                            <p class="product-price">₹180 (loaf)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="15" data-name="Sourdough Bread" data-price="180"
+                                    data-image="https://images.unsplash.com/photo-1630910392840-7a1a8ddfa6a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-price="200" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Cinnamon Rolls</h3>
+                            <p class="product-seller">By Sweet Delights</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(421)</span>
+                            </div>
+                            <p class="product-price">₹200 (4 pcs)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="16" data-name="Cinnamon Rolls" data-price="200"
+                                    data-image="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Organic Produce -->
+            <div class="category-content" id="organic">
+                <div class="market-header">
+                    <h2 class="market-title">Organic Produce</h2>
+                    <div class="sort-options">
+                        <select id="sort-organic">
+                            <option value="popular">Sort by: Popular</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="product-grid" id="organic-products">
+                    <!-- Product 1 -->
+                    <div class="product-card" data-price="120" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Organic Tomatoes</h3>
+                            <p class="product-seller">By Farm Fresh</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(287)</span>
+                            </div>
+                            <p class="product-price">₹120 (1kg)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="17" data-name="Organic Tomatoes" data-price="120"
+                                    data-image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card" data-price="180" data-rating="4.0">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Organic Avocados</h3>
+                            <p class="product-seller">By Green Valley</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(198)</span>
+                            </div>
+                            <p class="product-price">₹180 (3 pcs)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="18" data-name="Organic Avocados" data-price="180"
+                                    data-image="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card" data-price="90" data-rating="5.0">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Organic Spinach</h3>
+                            <p class="product-seller">By Nature's Basket</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(321)</span>
+                            </div>
+                            <p class="product-price">₹90 (500g)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="19" data-name="Organic Spinach" data-price="90"
+                                    data-image="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card" data-price="250" data-rating="4.5">
+                        <img src="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                            alt="Product" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">Organic Mangoes</h3>
+                            <p class="product-seller">By Tropical Farms</p>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>(276)</span>
+                            </div>
+                            <p class="product-price">₹250 (1kg)</p>
+                            <div class="product-actions">
+                                <button class="add-to-cart" data-id="20" data-name="Organic Mangoes" data-price="250"
+                                    data-image="https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">Add
+                                    to Cart</button>
+                                <button class="save-btn"><i class="far fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart">&times;</button>
+        </div>
+
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span class="subtotal">₹0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>Delivery Fee:</span>
+                <span>₹30.00</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span class="total-price">₹30.00</span>
+            </div>
+
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Floating Cart Icon -->
+    <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <script src="/eatzzo/eatzzo/static/js/main/header.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/main/footer.js"></script>
+    <script src="/eatzzo/eatzzo/static/js/stores/market.js"></script>
+</body>
+
+</html>
